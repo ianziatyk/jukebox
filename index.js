@@ -1,6 +1,6 @@
 
 // var play= document.getElementById('play');
-// var pause = document.getElementById('pause')
+var pause = document.getElementById('pause')
 
 var stop = document.getElementById('stop')
 var albumArt=document.getElementById('albumArt')
@@ -42,10 +42,12 @@ function playSong(){
 	console.log(songs[currentsong].artwork)
 	albumArt.innerHTML= "<img src="+songs[currentsong].artwork+"width='100%' 'height=100%'>";
 	artist.innerHTML= songs[currentsong].songname +"<br>"+songs[currentsong].artist;
-	gif.innerHTML="<img src='images/gif.gif'>" ;
-	gif.style.backgroundSize= "90%";
-	gif.style.backgroundRepeat='no-repeat'
-	albumArt.style.boxShadow='5px 5px 100px white'
+	// gif.innerHTML="<img src='images/gif.gif'>" ;
+	// gif.style.backgroundSize= "90%";
+	// gif.style.backgroundRepeat='no-repeat'
+	albumArt.style.boxShadow='5px 5px 100px white';
+	artist.style.animationPlayState = 'paused';
+
 
 }
 
@@ -53,6 +55,7 @@ function playSong(){
 function pauseSong(){
 	myAudio.pause()
 	center.style.backgroundImage = '';
+	artist.style.animationPlayState = 'running'
 }
 
  function skipSong(){

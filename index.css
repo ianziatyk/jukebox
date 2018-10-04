@@ -81,37 +81,44 @@ text-align: center;
 	}
 
 #artist{text-align: center;
-		color:grey;
+		color:white;
 		font-size: 15px;
-		opacity: .3;
+		opacity: .5;
 		text-shadow: 5px solid white;
 		margin-top:-125px;
+		margin-left: 125px;
 		
 	}
 
 #artist:hover{
 	margin-bottom: 0px;
-		opacity: .9;
+	  ;
 		}
 
 #artist{
-	/*width: 100px;
+	width: 250px;
 	height:100px;
-	position: relative;
-	
-	margin:px;
 	animation: myFirstAnimation 1s;
 	animation-timing-function: linear;
 	animation-iteration-count:infinite;
-	animation-play-state:;
+	animation-play-state: paused;
 }
 
 @keyframes myFirstAnimation{
   0%{
-  		display: hidden;
+  	
   }
  
-  90%{
+  100%{
 		color: red;
   }
-  }*/
+  }
+
+
+
+
+
+
+
+
+
