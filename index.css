@@ -1,0 +1,117 @@
+body{height:100%;
+	margin:0 auto;
+	font-family:  'Krub', sans-serif;
+	display: flex;
+
+}
+
+.ipod{height:900px;
+	width: 500px;
+	background-repeat:no-repeat;
+	margin-left: 25%;
+	background-size: 100%;
+	background-image: url('images/ipod2.png');
+	background-repeat: no-repeat;
+	box-shadow: 200px black;
+
+}
+
+
+	
+
+/*.grid{display: grid;
+	grid-template-rows: 6fr 1fr;
+	background-size: 75%;
+	background-image: url('images/ipd.png');
+	background-repeat: no-repeat;
+
+
+}*/
+
+	.bottom-grid{ align-content: center;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+
+	}
+
+.btn{
+	text-align: center;
+	opacity: .9;
+	cursor: pointer;
+	padding: 40px 25px 0px;
+	margin-left: 20px;
+}
+.btn:hover{
+	opacity: .4;
+	box-shadow: 10px white;
+	transform: scale(1.1);
+}
+
+.bottom-grid{padding-top:40px;
+
+}
+.butttons{display: flex;
+	flex-direction: row;
+
+
+}
+
+#center{
+text-align: center;
+
+ 
+}
+
+
+
+
+#albumArt{align-content: center;
+	margin-top: 50px;
+	display:inline-flex;
+	height: 250px;
+	width:250px;
+	align-content: center;
+	background-size: 150% 200%;
+	/*border-radius: 10px 10px 10px 10px;*/
+
+	
+
+		
+	}
+
+#artist{text-align: center;
+		color:grey;
+		font-size: 15px;
+		opacity: .3;
+		text-shadow: 5px solid white;
+		margin-top:-125px;
+		
+	}
+
+#artist:hover{
+	margin-bottom: 0px;
+		opacity: .9;
+		}
+
+#artist{
+	/*width: 100px;
+	height:100px;
+	position: relative;
+	
+	margin:px;
+	animation: myFirstAnimation 1s;
+	animation-timing-function: linear;
+	animation-iteration-count:infinite;
+	animation-play-state:;
+}
+
+@keyframes myFirstAnimation{
+  0%{
+  		display: hidden;
+  }
+ 
+  90%{
+		color: red;
+  }
+  }*/
