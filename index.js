@@ -1,11 +1,14 @@
 
-// var play= document.getElementById('play');
+var play= document.getElementById('play');
 var pause = document.getElementById('pause')
 
 var stop = document.getElementById('stop')
 var albumArt=document.getElementById('albumArt')
 var artist= document.getElementById('artist')
+var artist2= document.getElementById('artist2')
 var gif = document.getElementById('gif')
+var prev = document.getElementById('prev')
+
 
 //play.addEventListener('click', function(){song.play()});
 class song{
@@ -39,14 +42,16 @@ var myAudio=new Audio();
 function playSong(){
 	myAudio.src=songs[currentsong].url;
 	myAudio.play();
+	songs[currentsong].url.currentTime=0;
 	console.log(songs[currentsong].artwork)
 	albumArt.innerHTML= "<img src="+songs[currentsong].artwork+"width='100%' 'height=100%'>";
-	artist.innerHTML= songs[currentsong].songname +"<br>"+songs[currentsong].artist;
+	//artist.innerHTML= songs[currentsong].songname +"<br>"+songs[currentsong].artist;
 	// gif.innerHTML="<img src='images/gif.gif'>" ;
 	// gif.style.backgroundSize= "90%";
 	// gif.style.backgroundRepeat='no-repeat'
 	albumArt.style.boxShadow='5px 5px 100px white';
-	artist.style.animationPlayState = 'paused';
+	artist2.style.animationPlayState = 'paused';
+	artist2.innerHTML= songs[currentsong].songname +"<br>"+songs[currentsong].artist;
 
 
 }
@@ -54,9 +59,11 @@ function playSong(){
 
 function pauseSong(){
 	myAudio.pause()
+	songs[currentsong].url.currentTime=0
 	center.style.backgroundImage = '';
-	artist.style.animationPlayState = 'running'
+	artist2.style.animationPlayState = 'running';
 }
+
 
  function skipSong(){
  	if(currentsong==songs.length-1){
@@ -76,10 +83,25 @@ function stopSong(){
 	pauseSong()
 	albumArt.innerHTML=' ';
 	albumArt.style.boxShadow=''
-	artist.innerHTML= '';
+	artist2.innerHTML= '';
 
 
 }
+ function prevSong(){
+ 	if(currentsong==0){
+ 	playSong()
+
+ 	// myAudio.src=songs[currentsong+=1].url;
+ 	// myAudio.play()
+ }else{
+ 	currentsong--;
+
+ 	playSong();
+
+
+
+ }}
+
 
 
 // var art = document.getElementById('art');
@@ -95,3 +117,6 @@ play.addEventListener('click',playSong)
 pause.addEventListener('click',pauseSong)
 skip.addEventListener('click',skipSong)
 stop.addEventListener('click',stopSong)
+prev.addEventListener('click',prevSong)
+
+

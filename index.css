@@ -1,7 +1,10 @@
 body{height:100%;
 	margin:0 auto;
-	font-family:  'Krub', sans-serif;
-	display: flex;
+	font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+	font-size: 17px;
+	color:grey;
+
+	
 
 }
 
@@ -13,9 +16,12 @@ body{height:100%;
 	background-image: url('images/ipod2.png');
 	background-repeat: no-repeat;
 	box-shadow: 200px black;
+	margin-top: 100px;
 
 }
-
+.stopRel{
+	display: none;
+}
 
 	
 
@@ -28,19 +34,24 @@ body{height:100%;
 
 }*/
 
-	.bottom-grid{ align-content: center;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: row;
+	.bottom-grid{ width: 60%;
+		height:60%;
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		padding-top:270px;
+		margin-left: 20%;
 
+		
 	}
-
+.innerGrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
 .btn{
 	text-align: center;
 	opacity: .9;
 	cursor: pointer;
-	padding: 40px 25px 0px;
-	margin-left: 20px;
+	padding: 10px;
 }
 .btn:hover{
 	opacity: .4;
@@ -48,7 +59,7 @@ body{height:100%;
 	transform: scale(1.1);
 }
 
-.bottom-grid{padding-top:40px;
+
 
 }
 .butttons{display: flex;
@@ -57,54 +68,66 @@ body{height:100%;
 
 }
 
-#center{
+#center{ height: 200px;
 text-align: center;
+display: grid;
+grid-template-rows: 8fr 1fr;
 
  
 }
+#pause{
+	padding-top: 25px;
+}
+.artRel{
+	
+}
+
+#artist{
+	margin: 0 auto;
+}
 
 
-
-
-#albumArt{align-content: center;
+#albumArt{
+	margin:0 auto;
 	margin-top: 50px;
-	display:inline-flex;
 	height: 250px;
 	width:250px;
-	align-content: center;
 	background-size: 150% 200%;
 	/*border-radius: 10px 10px 10px 10px;*/
-
-	
 
 		
 	}
 
-#artist{text-align: center;
+#artist{position: absolute;
+		top: 405px;
+		left:610px;
+
 		color:white;
 		font-size: 15px;
 		opacity: .5;
 		text-shadow: 5px solid white;
-		margin-top:-125px;
-		margin-left: 125px;
 		
 	}
 
-#artist:hover{
-	margin-bottom: 0px;
-	  ;
+#artist2:hover{
+	color: green;
 		}
 
-#artist{
-	width: 250px;
-	height:100px;
-	animation: myFirstAnimation 1s;
+
+
+#artist2{display: flex;
+		color:white;
+		font-size: 15px;
+		opacity: .5;
+		text-shadow: 5px solid white;
+		z-index: 4;
+		animation: myFirstAnimation 1s;
 	animation-timing-function: linear;
 	animation-iteration-count:infinite;
 	animation-play-state: paused;
+	margin: 0 auto;
 }
-
-@keyframes myFirstAnimation{
+	@keyframes myFirstAnimation{
   0%{
   	
   }
@@ -114,6 +137,8 @@ text-align: center;
   }
   }
 
+
+}
 
 
 
